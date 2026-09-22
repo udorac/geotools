@@ -1,10 +1,10 @@
 Geotools
 ========
 
-**Geotools** is a PHP geo-related library, forked from [thephpleague/geotools](https://github.com/udorac/geotools) without dependency on ([Geocoder](https://github.com/willdurand/Geocoder)).
+**Geotools** is a PHP geo-related library, forked from [thephpleague/geotools](https://github.com/thephpleague/geotools) without dependency on ([Geocoder](https://github.com/willdurand/Geocoder)).
 
 [![Latest Version](https://poser.pugx.org/udorac/geotools/v/stable)](https://github.com/udorac/geotools/releases)
-[![Total Downloads](https://poser.pugx.org/udorac/geotools/downloads)](https://packagist.org/packages/league/geotools)
+[![Total Downloads](https://poser.pugx.org/udorac/geotools/downloads)](https://packagist.org/udorac/league/geotools)
 
 Features
 --------
@@ -342,12 +342,12 @@ Acknowledgments
 Changelog
 ---------
 
-[See the changelog file](https://github.com/udorac/geotools/blob/master/CHANGELOG.md)
+[See Releases](https://github.com/udorac/geotools/releases)
 
 Contributing
 ------------
 
-Please see [CONTRIBUTING](https://github.com/thephpleague/geotools/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/udorac/geotools/blob/master/CONTRIBUTING.md) for details.
 
 Support
 -------
