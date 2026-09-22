@@ -3,8 +3,8 @@ Geotools
 
 **Geotools** is a PHP geo-related library, forked from [thephpleague/geotools](https://github.com/thephpleague/geotools) without dependency on ([Geocoder](https://github.com/willdurand/Geocoder)).
 
-[![Latest Version](https://poser.pugx.org/udorac/geotools/v/stable)](https://github.com/udorac/geotools/releases)
-[![Total Downloads](https://poser.pugx.org/udorac/geotools/downloads)](https://packagist.org/udorac/league/geotools)
+[![Latest Version](https://poser.pugx.org/udorac/geotools/v)](https://github.com/udorac/geotools/releases)
+[![Total Downloads](https://poser.pugx.org/udorac/geotools/downloads)](https://packagist.org/packages/udorac/geotools)
 
 Features
 --------
