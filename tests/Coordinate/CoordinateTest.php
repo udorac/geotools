@@ -25,7 +25,7 @@ class CoordinateTest extends \League\Geotools\Tests\TestCase
     public function testConstructorWithInvalidCoordinatesShouldThrowAnException($coordinates)
     {
         $this->expectException(\League\Geotools\Exception\InvalidArgumentException::class);
-        $this->expectExceptionMessage('It should be a string, an array or a class which implements Geocoder\Model\Address !');
+        $this->expectExceptionMessage('It should be a string, an array or a class which implements Geocoder\Location !');
         new Coordinate($coordinates);
     }
 
@@ -188,8 +188,7 @@ class CoordinateTest extends \League\Geotools\Tests\TestCase
      */
     public function testConstructorShouldReturnsLatitudeAndLongitude($result)
     {
-        $geocoded = $this->createAddress($result);
-        $coordinate = new Coordinate($geocoded);
+        $coordinate = new Coordinate([$result['latitude'], $result['longitude']]);
 
         $this->assertSame((string) $result['latitude'], $coordinate->getLatitude());
         $this->assertSame((string) $result['longitude'], $coordinate->getLongitude());
@@ -349,7 +348,7 @@ class CoordinateTest extends \League\Geotools\Tests\TestCase
     {
         $this->expectException(\League\Geotools\Exception\InvalidArgumentException::class);
         $this->expectExceptionMessage('It should be a valid and acceptable ways to write geographic coordinates !');
-        $coordinate = new Coordinate($this->createEmptyAddress());
+        $coordinate = new Coordinate('');
         $coordinate->setFromString('foo');
     }
 

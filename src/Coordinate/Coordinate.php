@@ -72,7 +72,7 @@ class Coordinate implements CoordinateInterface, \JsonSerializable
             $this->setFromString($coordinates);
         } else {
             throw new InvalidArgumentException(
-                'It should be a string, an array or a class which implements Geocoder\Model\Address !'
+                'It should be a string, an array or a class which implements Geocoder\Location !'
             );
         }
 

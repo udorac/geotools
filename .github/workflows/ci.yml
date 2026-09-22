@@ -10,24 +10,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: [ '7.3', '7.4', '8.0', '8.1', '8.2', '8.3', '8.4' ]
+        php: [ '8.1', '8.2', '8.3', '8.4', '8.5' ]
         strategy: [ 'highest' ]
-        sf_version: ['']
         include:
-            - php: 7.3
-              sf_version: '4.*'
-            - php: 7.4
-              strategy: 'lowest'
-            - php: 8.0
-              sf_version: '6.*'
             - php: 8.1
-              sf_version: '6.*'
-            - php: 8.2
-              sf_version: '6.*'
-            - php: 8.3
-              sf_version: '7.*'
-            - php: 8.4
-              sf_version: '7.*'
+              strategy: 'lowest'
 
     steps:
       - name: Checkout code
@@ -44,8 +31,6 @@ jobs:
 
       - name: Download dependencies
         uses: ramsey/composer-install@v2
-        env:
-            SYMFONY_REQUIRE: ${{ matrix.sf_version }}
         with:
           dependency-versions: ${{ matrix.strategy }}
           composer-options: --no-interaction --prefer-dist --optimize-autoloader

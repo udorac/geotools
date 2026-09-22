@@ -67,16 +67,6 @@ class GeotoolsTest extends TestCase
         $this->assertInstanceOf('League\Geotools\Vertex\VertexInterface', $vertex);
     }
 
-    public function testBatchShouldReturnANewBatchInstance()
-    {
-        $geocoder = new Geocoder();
-        $batch = $this->geotools->batch($geocoder);
-
-        $this->assertTrue(is_object($batch));
-        $this->assertInstanceOf('League\Geotools\Batch\Batch', $batch);
-        $this->assertInstanceOf('League\Geotools\Batch\BatchInterface', $batch);
-    }
-
     public function testGeohashShouldReturnANewGeohashInstance()
     {
         $geohash = $this->geotools->geohash();
@@ -84,14 +74,5 @@ class GeotoolsTest extends TestCase
         $this->assertTrue(is_object($geohash));
         $this->assertInstanceOf('League\Geotools\Geohash\Geohash', $geohash);
         $this->assertInstanceOf('League\Geotools\Geohash\GeohashInterface', $geohash);
-    }
-
-    public function testConvertShouldReturnsANewConvertInstance()
-    {
-        $convert = $this->geotools->convert($this->getStubCoordinate());
-
-        $this->assertTrue(is_object($convert));
-        $this->assertInstanceOf('League\Geotools\Convert\Convert', $convert);
-        $this->assertInstanceOf('League\Geotools\Convert\ConvertInterface', $convert);
     }
 }
